@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'> 
+    <title>HANGMAN_GAMEAPP</title>
+    <link rel="shortcut icon" href="image.png" type="image/x-icon">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='style.css'>
+    
+</head>
+<body>
+    <div class="game-overlay">
+        <div class="Text">
+            <img src="images/lost.gif" alt="gif">
+            <h4>Game Over!</h4>
+            <p>The corrrect word is: <b>beautiful</b></p>
+            <button class="try-again">Try Again</button>
+        </div>
+    </div>
+    <div class="Box">
+        <div class="hangman-box">
+            <img src="images/hangman-0.svg" alt="my-img">
+            <h1>Hangman-Game</h1>
+    </div>
+        <div class="game-pack">
+            <ul class="word-view"></ul>
+            <h4 class="hint-word">
+                Hint:
+                <b>Lorem ipsum, ex quas praesentium officiis ea inventore? Architecto magnam maiores ipsa</b>
+            </h4>
+            <h4 class="predict-text">
+                Wrong predict:
+                <b>0 / 6</b>
+            </h4> 
+            <div class="keypad"></div>
+        </div>
+    </div> 
+
+    <script src="word-list.js" defer></script>
+    <script src='script.js'defer></script>
+</body>
+</html>
+
+
+

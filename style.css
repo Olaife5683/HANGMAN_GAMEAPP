@@ -1,0 +1,179 @@
+/* importing google font - Roboto
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}  
+body {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: center;
+    min-height: 100vh;
+    background: blueviolet;
+}  
+.Box {
+    width: 850px;
+    background: #fff;
+    display: flex;
+    gap: 70px;
+    align-items: flex-end;
+    padding: 40px 60px;
+    border-radius: 10px;
+}
+hangman-box{
+    max-width: 270px;
+} 
+.hangman-box h1 {
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.word-view {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+.word-view .letter {
+    width: 28px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px; 
+    border-bottom: 3px solid #000;
+} 
+
+.word-view .letter.predicted {
+    border-color: transparent;
+    margin: -40px 0 35px;
+}
+
+.game-pack h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.game-pack h4 b {
+    font-weight: 600;  
+}
+
+.game-pack .predict-text b {
+    color: red;
+}
+
+.game-pack .keypad {
+    display: flex;
+    gap: 5px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
+:where(.game-overlay, .keypad) button{
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #5e63ba;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.keypad button {
+    padding: 7px;
+    width: calc(100% / 9 - 5px);
+} 
+
+.keypad button[disabled] {
+   opacity: 0.6;
+   pointer-events: none; 
+}
+
+:where(.game-overlay, .keypad) button:hover{
+    background: #8286c9;
+}
+
+.game-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 0 10px;
+    pointer-events: none;
+    z-index: 999;
+    display: auto;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+    transition: opacity 0.4s ease;
+}
+.game-overlay.view{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.game-overlay .Text{
+    background: white;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.game-overlay img {
+    max-width: 100px;
+    margin-bottom: 15px;
+} 
+
+.game-overlay h4{
+    font-size: 1.53rem;
+}
+
+.game-overlay p{
+    font-size: 1.10rem;
+    margin: 10px 0 30px;
+    font-weight: 400;
+}
+
+.game-overlay p b{
+    color: #5e63ba;
+    font-weight: 600;
+}
+
+.game-overlay button{
+    padding: 10px 25px;
+} 
+
+@media (max-width: 780px) {
+    .Box{
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+
+    .hangman-box img {
+        max-width: 180px;
+    }
+
+    .hangman-box h1 {
+        display: none;
+    }
+}
+
+
+
+
